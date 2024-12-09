@@ -9,6 +9,11 @@ function hitung(){
     var nilaiUts = parseInt(document.fform.uts.value);
     var nilaiUas = parseInt(document.fform.uas.value);
 
+    if (!nilaiQuiz || !nilaiTugas || !nilaiUts || !nilaiUas) {
+        alert("Semua nilai harus di isi");
+        return;
+    }
+
     var tNilai1 = nilaiQuiz * 0.1;
     var tNilai2 = nilaiTugas * 0.2;
     var tNilai3 = nilaiUts * 0.3;
