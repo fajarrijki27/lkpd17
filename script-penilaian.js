@@ -23,16 +23,16 @@ function hitung(){
         ket = "Lulus dengan sangat baik"
     }else if (tnk <=80 && tnk >= 68){
         indeks = "B";
-        keterangan = "Lulus dengan baik";
+        ket = "Lulus dengan baik";
     }else if (tnk <=68 && tnk >= 55){
         indeks = "C";
-        keterangan = "Lulus dengan cukup";
+        ket = "Lulus dengan cukup";
     }else if (tnk <=55 && tnk >= 38){
         indeks = "D";
-        keterangan = "Lulus dengan kurang";
+        ket = "Lulus dengan kurang";
     }else if (tnk < 38){
         indeks = "E";
-        keterangan = "Tidak Lulus";
+        ket = "Tidak Lulus";
     }
 
     document.fform.nAkhir.value = tnk;
