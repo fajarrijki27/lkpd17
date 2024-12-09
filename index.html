@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Igasar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><img src="logo.png" alt="Logo kami"></div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html">Travel</a></li>
+                    <li><a href="Penilaian.html">Penilaian</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <br><br>
+    <center>
+        <div class="data-penumpang">
+            <form name="fform">
+                <table border="1">
+                    <tr>
+                        <td colspan="2" style="padding: 20px;">
+                            <center>
+                                <table border="1">
+                                    <tr>
+                                        <td><img src="Picture1.png" alt="Logo Kami"></td>
+                                        <td>Travel Igasar Pindad Bandung</td>
+                                    </tr>
+                                </table>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px 65px 15px;">
+                            <table border="1">
+                                <tr>
+                                    <td colspan="3" style="padding: 10px; text-align: center;">Data Penumpang</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px;">Nama</td>
+                                    <td style="padding: 10px;">:</td>
+                                    <td style="padding: 10px;"><input type="text" name="nama"></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px;">Tujuan</td>
+                                    <td style="padding: 10px;">:</td>
+                                    <td style="padding: 10px;">
+                                        <select name="kota">
+                                            <option value="Jogjakarta">Jogjakarta</option>
+                                            <option value="Surabaya">Surabaya</option>
+                                            <option value="Semarang">Semarang</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px;">Jumlah Tiket</td>
+                                    <td style="padding: 10px;">:</td>
+                                    <td style="padding: 10px;">
+                                        <input type="number" name="jumlah">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px;">Member</td>
+                                    <td style="padding: 10px;">:</td>
+                                    <td style="padding: 10px;">
+                                        <input type="radio" name="Member" value="Gold">Gold
+                                        <input type="radio" name="Member" value="Silver">Silver
+                                        <input type="radio" name="Member" value="Non-member">Bukan Member
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="padding: 15px 100px 15px;">
+                            <table border="1">
+                                <tr>
+                                    <td colspan="3" style="padding: 10px; text-align: center;">Data Pembayaran</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px;">Harga Tiket</td>
+                                    <td style="padding: 10px;">:</td>
+                                    <td style="padding: 10px;"><input type="text" name="HargaTiket" disabled></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px;">Sub Total</td>
+                                    <td style="padding: 10px;">:</td>
+                                    <td style="padding: 10px;">
+                                        <input type="text" name="SubTotal" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px;">Diskon</td>
+                                    <td style="padding: 10px;">:</td>
+                                    <td style="padding: 10px;">
+                                        <input type="text" name="Diskon" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px;">Total Bayar</td>
+                                    <td style="padding: 10px;">:</td>
+                                    <td style="padding: 10px;">
+                                        <input type="text" name="TotalBayar" disabled>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding: 20px; text-align: center;">
+                            <input type="button" value="Hitung" onclick="hitung()">
+                            <input type="button" value="Bayar" onclick="bayar()" disabled id="bayarButton">
+                            <input type="reset" value="Ulang">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div class="data-transaksi" style="display: none;">
+            <form name="formakhir">
+                <table border="1">
+                    <tr>
+                        <td style="padding: 20px;"><img src="Picture1.png" alt="Logo Kami"></td>
+                        <td><h2>Travel Igasar Pindad Bandung</h2></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;"><h3>Bukti Pembayaran</h3></td>
+                    </tr>
+                    <tr>
+                        <td>Nama Penumpang :</td>
+                        <td>
+                            <input type="text" name="onama" size="47" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tujuan :</td>
+                        <td>
+                            <input type="text" name="otujuan" size="47" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jumlah Tiket :</td>
+                        <td>
+                            <input type="text" name="ojTiket" size="47" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Member :</td>
+                        <td>
+                            <input type="text" name="omember" size="47" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Harga Tiket :</td>
+                        <td>
+                            <input type="text" name="ohTiket" size="47" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sub Total :</td>
+                        <td>
+                            <input type="text" name="osTotal" size="47" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Diskon :</td>
+                        <td>
+                            <input type="text" name="odiskon" size="47" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Total Bayar :</td>
+                        <td>
+                            <input type="text" name="otBayar" size="47" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dibayarkan :</td>
+                        <td>
+                            <input type="text" name="obayar" size="47" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kembalian :</td>
+                        <td>
+                            <input type="text" name="okembalian" size="47" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button onclick="window.history.back()">Selesai</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </center>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Igasar</title>
+    <link rel="stylesheet" href="style-penilaian.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><img src="logo.png" alt="Logo kami"></div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html">Travel</a></li>
+                    <li><a href="Penilaian.html">Penilaian</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <br>
+    <center>
+        <div class="data-penilaian">
+            <form name="fform">
+                <table border="1">
+                    <tr>
+                        <td rowspan="3" >
+                            <center>
+                                <img src="Picture1.png" alt="Logo Kami">
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><h2>Menghitung indeks Prestasi</h2></td>    
+                    </tr>
+                    <tr>
+                        <td colspan="3"><h2>Peserta didik SMK Igasar Pindad Bandung</h2></td>
+                    </tr>
+                    <tr>
+                        <td>Quiz 10% : <input type="text" name="quis" size="8"></td>
+                        <td>Tugas 20% : <input type="text" name="tugas" size="8"></td>
+                        <td>UTS 30% : <input type="text" name="uts" size="8"></td>
+                        <td>UAS 40% : <input type="text" name="uas" size="8"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="padding: 15px; text-align: center;">
+                            <input type="button" value="Hitung" onclick="hitung()">
+                            <input type="reset" value="Ulang">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: center;">
+                            Nilai Akhir : <input type="text" name="nAkhir" size="3" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: center;">
+                            Indeks Prestasi : <input type="text" name="indeks" size="3" disabled>
+                            Keterangan : <input type="text" name="Keterangan" disabled>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </center>
+    <script src="script-penilaian.js"></script>
+</body>
+</html>
